@@ -29,6 +29,12 @@ public class PokemonController{
         return service.salvar(pokemon);
     }
 
+    @PutMapping("/{id}")
+    public Pokemon atualizar(@PathVariable Long id, @RequestBody Pokemon pokemon){
+        pokemon.setId(id); // Garante que o ID passado na URL seja o mesmo do objeto
+        return service.atualizar(id,pokemon);
+}
+
     @DeleteMapping("/{id}")
     public void deletar(@PathVariable Long id) {
         service.deletar(id);
