@@ -1,6 +1,7 @@
 package com.brunao.PokeDexTeste.controller;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.brunao.PokeDexTeste.model.Pokemon;
@@ -10,7 +11,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping
+@CrossOrigin("*") 
 public class PokemonController{
+    @Autowired
     private final PokemonService service;
     public PokemonController(PokemonService service){
         this.service = service;
