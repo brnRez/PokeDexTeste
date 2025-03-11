@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Pokédex</h1>
+
+    <h2>Adicionar Pokémon</h2>
+    <form id="pokemonForm">
+        <input type="text" id="nome" placeholder="Nome do Pokemon" required>
+        <input type="text" id="tipo" placeholder="Tipo" required>
+        <input type="number" id="nivel" placeholder="Nível" required>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <h2>Buscar Pokémon via ID</h2>
+
+    <form id="search-form">
+        <label for="search-id">ID do Pokémon:</label>
+        <input type="number" id="search-id" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div id="search-result"></div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Nível</th>
+            </tr>
+        </thead>
+        <tbody id="pokemonTable"></tbody> 
+        
+    </table>
+
+    <a href="/PokeDexTeste/pokedex-frontend/pages/edicao.html">Menu de Edições</a>
+    <script src="js/script.js"></script> 
+
+</body>
+</html>
